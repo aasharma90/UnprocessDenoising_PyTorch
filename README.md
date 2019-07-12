@@ -16,7 +16,19 @@ Please ensure that you cite the paper if you use this code:
 The code is tested on Python 3.7, PyTorch 1.1.0, TorchVision 0.3.0, but lower versions are also likely to work. During training on a single NVidia GTX1080 GPU, keeping a batch-size of 16 and images cropped to 256x256, the memory consumption was found to be under 4Gb. 
 
 ### Training
-In the paper, the authors use the [MIRFlickr](https://press.liacs.nl/mirflickr/) dataset for training. You can use the entire set of 1M images (as done in the paper) or simply take the smaller subset of 25k images which I did for my training process. I then divided the set into training and validation sets containing 23750 and 1250 images respectively. I then manually filtered out images with less than 256x256 resolution from the training set, effectively giving 23442 images for training. 
+In the paper, the authors use the [MIRFlickr](https://press.liacs.nl/mirflickr/) dataset for training. You can use the entire set of 1M images (as done in the paper) or simply take the smaller subset of 25k images which I did for my training process. I then divided the set into training and validation sets containing 23750 and 1250 images respectively. I then filtered out images with less than 256x256 resolution from the training set, effectively giving 23442 images for training. You may further downsample them as recommended [here](https://github.com/google-research/google-research/tree/master/unprocessing) and the paper. You can then run-
+```
+$ python train.py --model_dir <RUN-NAME> --train_dir <PATH-TO-MIRFlickr-TRAIN-DIR> --test_dir <PATH-TO-MIRFlickr-TRAIN-DIR>
+```
+### Testing
+As done in the paper and recommended by the authors, the model works best on the [Darnstadt Noise Dataset](https://noise.visinf.tu-darmstadt.de/). You can test on this dataset by running-
+```
+$ python dnd_denoise.py --load_model <CHECKPOINT> --results_dir <RESULTS-DIR> --data_dir <PATH-TO-DND-DATASET>
+```
+You can download my pre-trained checkpoint from [here](https://www.dropbox.com/s/epnlhmq8jzft5rx/checkpoint_400.tar?dl=0) for sample testing. Running the above script would denoise the input RAW images, and then save both the noisy and denoised sRGB images (i.e. after converting both the noisy and denoised RAW images to sRGB domain). 
+
+### Results
+Since, quntiative evaluation can only be done through official submission on the Darmstadt dataset webpage, I could only compare the results qualiatively. The results in the following order: Noisy sRGB patch, Denoised sRGB patch (this code), Denoised sRGB patch (from the paper's supplement [here](http://timothybrooks.com/tech/unprocessing/darmstadt-supp/)
 
 
 
