@@ -37,6 +37,13 @@ You can download my pre-trained checkpoint from [here](https://www.dropbox.com/s
 Since, quntiative evaluation can only be done through official submission on the Darmstadt dataset webpage, I could only compare the results qualiatively. The results in the following order: Noisy RAW-to-sRGB patch, Denoised RAW-to-sRGB patch (this code), Denoised RAW-to-sRGB patch (from the paper's supplement [here](http://timothybrooks.com/tech/unprocessing/darmstadt-supp/))
 
 Image: 0001_18
+![sample_0001_18](images/0001_18_f.png)
 
+Image: 0006_06
+![sample_0006_06](images/0006_06_f.png)
 
+Image: 0016_09
+![sample_0016_09](images/0016_09_f.png)
 
+Image: 0017_03
+![sample_0017_03](images/0017_03_f.png)
