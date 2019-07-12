@@ -21,7 +21,7 @@ In the paper, the authors use the [MIRFlickr](https://press.liacs.nl/mirflickr/)
 $ python train.py \
 --model_dir <RUN-NAME> \
 --train_dir <PATH-TO-MIRFlickr-TRAIN-DIR> \
---test_dir <PATH-TO-MIRFlickr-TRAIN-DIR>
+--test_dir <PATH-TO-MIRFlickr-VALIDATION-DIR>
 ```
 ### Testing
 As done in the paper and recommended by the authors, the model works best on the [Darnstadt Noise Dataset](https://noise.visinf.tu-darmstadt.de/). You can test on this dataset by running-
