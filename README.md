@@ -48,6 +48,6 @@ Image: 0016_09
 Image: 0017_03
 ![sample_0017_03](images/0017_03_f.png)
 
-While denoising quality is evident, there is some incorrect white balancing observed out for images following a different bayer pattern than RGGB (such as 0001_18). This is basically a visualizing/processing problem in ```dnd_denoise.py```, and time perimitting, I may look into the problem. Also to note that the results are far from optimum, and some boost in performance can be obtained by training for a higher number of epochs or following some tricks mentioned by the authors on their official webpage [here](https://github.com/google-research/google-research/tree/master/unprocessing).   
+While denoising quality is evident, there is some incorrect white balancing observed out for images following a different bayer pattern than RGGB (such as 0001_18). This is basically a visualization/RAW-to-sRGB processing problem in ```dnd_denoise.py```, and time perimitting, I may look into the problem. Also to note that the results are far from optimum, and some boost in performance can be obtained by training for a higher number of epochs or following some tricks mentioned by the authors on their official webpage [here](https://github.com/google-research/google-research/tree/master/unprocessing).   
 
 Please feel free to report any improvements or bugs present in the code. 
