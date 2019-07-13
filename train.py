@@ -29,7 +29,7 @@ def get_arguments():
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--model_dir", type=str, required=True, default=None,
-        help="Location at which to save model logs and checkpoints.")
+        help="Location at which to save the model, logs and checkpoints.")
     parser.add_argument("--load_model", type=str, required=False, default=None,
         help="Location from which any pre-trained model needs to be loaded.")
     parser.add_argument("--train_dir", type=str, required=True, default=None,
@@ -47,7 +47,7 @@ def get_arguments():
     parser.add_argument("--epoch_start", type=int, default=0,
         help="Epoch to start training the model from.")
     parser.add_argument("--learning_rate", type=float, default=2e-5,
-        help="Learning rate for encoder.")
+        help="Learning rate for the model.")
     parser.add_argument('--skip_validation', action='store_true',
     	help='Whether to skip validation in the training process?')
     parser.add_argument('--gpu_id', type=int, default=3,
