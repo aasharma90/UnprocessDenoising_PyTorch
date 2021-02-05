@@ -77,7 +77,13 @@ if __name__ == '__main__':
     noisy =np.float32(np.array(img['Inoisy']).T)
 
     # Loads raw Bayer color pattern.
-    bayer_pattern = np.asarray(info[info['camera'][0][i]]['pattern']).tolist()
+    # bayer_pattern = np.asarray(info[info['camera'][0][i]]['pattern']).tolist()
+    """
+    5th Feb, 2021
+    Suggestion from: https://github.com/aasharma90/UnprocessDenoising_PyTorch/issues/6
+    Fixes the previously observed visualisation/white-balance problem
+    """
+    bayer_pattern = np.asarray(np.array(info[info['camera'][0][i]]['pattern']).T).tolist() 
     # Load the camera's (or image's) ColorMatrix2 
     xyz2cam = torch.FloatTensor(np.reshape(np.asarray(info[info['camera'][0][i]]['ColorMatrix2']), (3, 3)))
     # print(bayer_pattern, xyz2cam)
