@@ -81,7 +81,7 @@ if __name__ == '__main__':
     """
     5th Feb, 2021
     Suggestion from: https://github.com/aasharma90/UnprocessDenoising_PyTorch/issues/6
-    Fixes the previously observed visualisation/white-balance problem
+    Using transpose of the bayer pattern fixes the previously observed visualisation/white-balance problem
     """
     bayer_pattern = np.asarray(np.array(info[info['camera'][0][i]]['pattern']).T).tolist() 
     # Load the camera's (or image's) ColorMatrix2 
