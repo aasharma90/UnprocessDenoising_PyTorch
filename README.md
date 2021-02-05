@@ -39,7 +39,7 @@ Since, quantitative evaluation can only be done through official submission on t
 Image: 0001_18
 ![sample_0001_18](images/0001_18_f.png)
 
-[EDIT: 5th Feb, 2021]
+[UPDATE: 5th Feb, 2021]
 ![](images/0001_18_f2.png)
 
 Image: 0006_06
@@ -53,7 +53,7 @@ Image: 0017_03
 
 While denoising is self-evident, there is some incorrect white balancing observed for images following a different bayer pattern than RGGB (such as 0001_18). This is basically a visualization/RAW-to-sRGB processing problem in ```dnd_denoise.py```, and time permitting, I may look into the problem. Also to note that the results are far from optimum, and some boost in performance can be obtained by training for a higher number of epochs or following some tricks mentioned by the authors on their official webpage [here](https://github.com/google-research/google-research/tree/master/unprocessing).   
 
-[EDIT: 5th Feb, 2021]
-Thanks to @happycaoyue for reporting the fix for the aforementioned problem. 
+[UPDATE: 5th Feb, 2021]
+Thanks to @happycaoyue for reporting the fix for the aforementioned visualisation problem. 
 
 Please feel free to report any improvements or bugs present in the code. 
